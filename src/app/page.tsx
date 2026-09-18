@@ -22,7 +22,11 @@ import {
   Mail,
   Gift,
   PlusCircle,
+  BookOpen,
 } from 'lucide-react';
+import StructuredData from '@/components/StructuredData';
+import AdBannerPlaceholder from '@/components/AdBannerPlaceholder';
+import AffiliateFloristCard from '@/components/AffiliateFloristCard';
 
 function HomeContent() {
   const searchParams = useSearchParams();
@@ -99,9 +103,12 @@ function HomeContent() {
 
       {/* Barra de Navegación */}
       <HeaderNav />
+      <StructuredData />
 
       {/* ================= CONTENIDO PRINCIPAL ================= */}
       <main className="flex-1 flex flex-col items-center justify-center max-w-5xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-10 z-10">
+        <AdBannerPlaceholder slot="home-top" />
+
         {/* CASO A: VISTA DE DEDICATORIA PERSONALIZADA RECIBIDA */}
         {isDedicatedView ? (
           <div className="w-full flex flex-col items-center text-center animate-fadeIn">
@@ -244,13 +251,33 @@ function HomeContent() {
                 </ul>
               </div>
 
-              {/* Botón final en la sección */}
-              <div className="mt-8 text-center pt-4 border-t border-amber-200/60">
+              {/* Tarjeta de flores reales de afiliados */}
+              <AffiliateFloristCard className="mt-8" />
+
+              {/* Enlaces de interés SEO */}
+              <div className="mt-8 pt-6 border-t border-amber-200/60 flex flex-wrap items-center justify-between gap-3 text-xs text-amber-900 font-semibold">
+                <div className="flex items-center gap-3">
+                  <Link
+                    href="/significado"
+                    className="inline-flex items-center gap-1 text-amber-800 hover:text-amber-950 underline underline-offset-2"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-amber-600" />
+                    <span>¿Qué significan las flores amarillas?</span>
+                  </Link>
+                  <span className="text-amber-300">&bull;</span>
+                  <Link
+                    href="/frases"
+                    className="inline-flex items-center gap-1 text-amber-800 hover:text-amber-950 underline underline-offset-2"
+                  >
+                    <span>50+ Frases de flores amarillas</span>
+                  </Link>
+                </div>
+
                 <Link
                   href="/crear"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm shadow-md hover:scale-105 transition-all cursor-pointer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber-500 hover:bg-amber-600 text-white font-bold shadow-md hover:scale-105 transition-all cursor-pointer"
                 >
-                  <span>Crea tu ramo personalizado ahora</span>
+                  <span>Crear dedicatoria</span>
                   <span>✨</span>
                 </Link>
               </div>
