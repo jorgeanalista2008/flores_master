@@ -173,6 +173,21 @@ Este proyecto está 100% optimizado para desplegarse con un solo clic en **Verce
 
 ---
 
+## 🪙 Donaciones con Criptomonedas
+
+Si este proyecto te ha gustado o te ha servido para dedicar flores a tu persona favorita, ¡puedes apoyar al creador con una donación en criptomonedas!
+
+| Criptomoneda | Red | Dirección de Depósito |
+| :--- | :--- | :--- |
+| **USDT (Tether)** | Tron (TRC-20) | Configurada en la app / Variable de entorno |
+| **Solana (SOL)** | Red Solana | Configurada en la app / Variable de entorno |
+| **Ethereum (ETH)** | ERC-20 / Polygon | Configurada en la app / Variable de entorno |
+| **Bitcoin (BTC)** | Bitcoin Native | Configurada en la app / Variable de entorno |
+
+*Puedes actualizar tus propias direcciones de billetera fácilmente en `src/lib/cryptoWallets.ts` o mediante variables de entorno.*
+
+---
+
 ## 👨‍💻 Autor y Contactos
 
 Desarrollado con 💛 por **Jorge**:

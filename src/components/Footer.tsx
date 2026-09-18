@@ -1,6 +1,9 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { Heart, Sparkles } from 'lucide-react';
+import { Heart, Sparkles, Coins } from 'lucide-react';
+import CryptoDonateModal from '@/components/CryptoDonateModal';
 
 function GithubIcon({ className = 'w-4 h-4' }: { className?: string }) {
   return (
@@ -21,6 +24,7 @@ function GithubIcon({ className = 'w-4 h-4' }: { className?: string }) {
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [isDonateOpen, setIsDonateOpen] = useState(false);
 
   return (
     <footer className="w-full border-t border-amber-200/60 bg-amber-50/60 backdrop-blur-md z-10 py-10 px-4 sm:px-6">
@@ -38,9 +42,19 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Contacto de GitHub del Creador */}
+        {/* Contacto de GitHub y Donaciones del Creador */}
         <div className="flex flex-col items-center md:items-end gap-2">
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-2">
+            {/* Botón de donación con Criptomonedas */}
+            <button
+              type="button"
+              onClick={() => setIsDonateOpen(true)}
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white text-xs font-bold shadow-sm transition-all hover:scale-105 active:scale-95 cursor-pointer"
+            >
+              <Coins className="w-4 h-4 text-amber-100" />
+              <span>Donar con Cripto 🪙</span>
+            </button>
+
             <a
               href="https://github.com/jorgeanalista2008"
               target="_blank"
@@ -59,7 +73,7 @@ export default function Footer() {
               title="Repositorio en GitHub"
             >
               <Sparkles className="w-3.5 h-3.5 text-amber-700" />
-              <span>Código en GitHub</span>
+              <span>Código</span>
             </a>
           </div>
 
@@ -101,6 +115,12 @@ export default function Footer() {
           &copy; {currentYear} Flores Amarillas &bull; Que nunca te falten tus flores amarillas.
         </p>
       </div>
+
+      {/* Modal de donación con criptomonedas */}
+      <CryptoDonateModal
+        isOpen={isDonateOpen}
+        onClose={() => setIsDonateOpen(false)}
+      />
     </footer>
   );
 }
