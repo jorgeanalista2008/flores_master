@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Flores Amarillas 🌻✨ | Aplicación Web Interactiva
 
-## Getting Started
+Una experiencia web interactiva, moderna y emotiva desarrollada con **Next.js (App Router)**, **Tailwind CSS**, **HTML5 Canvas** y **Web Audio API**, inspirada en la popular tradición de regalar flores amarillas cada 21 de septiembre y en primavera.
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-blue?style=flat&logo=react)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 Características Principales
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **🌻 Ramo Interactivo en SVG 3D:** Ilustración de girasoles radiantes con efecto de florecimiento y seguimiento de perspectiva al mover el ratón o en pantalla táctil.
+- **✨ Lluvia de Pétalos en Canvas:** Sistema de partículas 60 FPS con pétalos dorados flotando con física de balanceo, brisa y respuesta a toques o clics.
+- **💌 Creador de Dedicatorias y Enlace para WhatsApp:** Personaliza para quién es, escribe un mensaje romántico o elige frases predefinidas, y genera un enlace único para enviar por WhatsApp.
+- **📜 Sobre y Carta de Amor con Sello de Cera:** Animación de desempaque donde el receptor toca el sello para abrir su carta personalizada con confeti dorado.
+- **🎶 Música Romántica (Web Audio API):** Melodía de cajita de música sintetizada directamente en el navegador, sin depender de servidores o archivos de audio externos.
+- **🌼 Mini-Juego "¿Cuánto te quiere?":** Girasol interactivo para deshojar pétalos (*Me quiere... mucho... poquito... ¡con toda su alma!*).
+- **📈 Optimizado para SEO Masivo:** Generación automática de `sitemap.xml`, `robots.txt`, esquemas JSON-LD (`FAQPage`, `WebSite`), y páginas de contenido `/significado` y `/frases`.
+- **💰 Preparado para Monetización:** Espacios integrados para **Google AdSense** (`public/ads.txt`) y banners de marketing de afiliados de flores reales a domicilio.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Instalación y Desarrollo Local
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/jorgeanalista2008/flores_master.git
+   cd flores_master
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Iniciar el servidor de desarrollo:**
+   ```bash
+   npm run dev
+   ```
+   Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-## Deploy on Vercel
+4. **Compilación de producción:**
+   ```bash
+   npm run build
+   npm run start
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👨‍💻 Autor y Contactos
+
+Desarrollado con 💛 por **Jorge**:
+
+- **GitHub:** [@jorgeanalista2008](https://github.com/jorgeanalista2008)
+- **Repositorio:** [flores_master](https://github.com/jorgeanalista2008/flores_master)
+- **Email:** [jorge.analista2008@gmail.com](mailto:jorge.analista2008@gmail.com)
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. ¡Siéntete libre de utilizarlo, compartirlo y dedicar todas las flores amarillas del mundo! 🌻

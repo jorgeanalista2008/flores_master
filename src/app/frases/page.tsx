@@ -5,6 +5,7 @@ import Link from 'next/link';
 import HeaderNav from '@/components/HeaderNav';
 import FallingPetals from '@/components/FallingPetals';
 import MusicPlayer from '@/components/MusicPlayer';
+import Footer from '@/components/Footer';
 import AdBannerPlaceholder from '@/components/AdBannerPlaceholder';
 import AffiliateFloristCard from '@/components/AffiliateFloristCard';
 import { Copy, Check, ArrowRight, BookOpen } from 'lucide-react';
@@ -228,6 +229,7 @@ export default function FrasesPage() {
       </main>
 
       <MusicPlayer />
+      <Footer />
     </div>
   );
 }

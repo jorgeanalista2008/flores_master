@@ -9,6 +9,7 @@ import LoveLetterModal from '@/components/LoveLetterModal';
 import PetalGame from '@/components/PetalGame';
 import MusicPlayer from '@/components/MusicPlayer';
 import HeaderNav from '@/components/HeaderNav';
+import Footer from '@/components/Footer';
 import {
   decodeDedication,
   PRESET_MESSAGES,
@@ -18,7 +19,6 @@ import { musicBox } from '@/lib/audioSynthesis';
 import confetti from 'canvas-confetti';
 import {
   Sparkles,
-  Heart,
   Mail,
   Gift,
   PlusCircle,
@@ -296,15 +296,8 @@ function HomeContent() {
       {/* Reproductor Flotante de Música */}
       <MusicPlayer />
 
-      {/* Pie de página */}
-      <footer className="w-full py-8 text-center text-xs text-amber-800/60 z-10 border-t border-amber-200/40 bg-amber-50/40 backdrop-blur-sm">
-        <p className="flex items-center justify-center gap-1">
-          Hecho con <Heart className="w-3.5 h-3.5 text-amber-500 fill-amber-500 inline" /> para que nadie se quede sin sus flores amarillas 🌻
-        </p>
-        <p className="mt-1 text-[11px] text-amber-700/50">
-          Inspirado en la magia de la primavera y las promesas que florecen para siempre.
-        </p>
-      </footer>
+      {/* Pie de página con contactos de GitHub */}
+      <Footer />
     </div>
   );
 }

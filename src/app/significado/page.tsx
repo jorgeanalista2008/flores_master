@@ -4,6 +4,7 @@ import Link from 'next/link';
 import HeaderNav from '@/components/HeaderNav';
 import FallingPetals from '@/components/FallingPetals';
 import MusicPlayer from '@/components/MusicPlayer';
+import Footer from '@/components/Footer';
 import StructuredData from '@/components/StructuredData';
 import AdBannerPlaceholder from '@/components/AdBannerPlaceholder';
 import AffiliateFloristCard from '@/components/AffiliateFloristCard';
@@ -185,6 +186,7 @@ export default function SignificadoPage() {
       </main>
 
       <MusicPlayer />
+      <Footer />
     </div>
   );
 }

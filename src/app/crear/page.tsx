@@ -13,6 +13,7 @@ import YellowBouquet from '@/components/YellowBouquet';
 import FallingPetals from '@/components/FallingPetals';
 import HeaderNav from '@/components/HeaderNav';
 import MusicPlayer from '@/components/MusicPlayer';
+import Footer from '@/components/Footer';
 import { musicBox } from '@/lib/audioSynthesis';
 import confetti from 'canvas-confetti';
 import {
@@ -293,6 +294,7 @@ export default function CrearDedicatoriaPage() {
       </main>
 
       <MusicPlayer />
+      <Footer />
     </div>
   );
 }
