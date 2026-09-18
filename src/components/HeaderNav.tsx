@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import confetti from 'canvas-confetti';
 import { musicBox } from '@/lib/audioSynthesis';
-import { Sparkles, Heart, PlusCircle, Home } from 'lucide-react';
+import { Sparkles, PlusCircle, Home } from 'lucide-react';
 
 export default function HeaderNav() {
   const pathname = usePathname();

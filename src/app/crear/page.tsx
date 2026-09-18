@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
 import {
   BouquetType,
   BOUQUET_OPTIONS,
@@ -18,11 +17,9 @@ import { musicBox } from '@/lib/audioSynthesis';
 import confetti from 'canvas-confetti';
 import {
   Sparkles,
-  Heart,
   MessageCircle,
   Copy,
   Check,
-  Send,
   Eye,
   Gift,
   ArrowRight,

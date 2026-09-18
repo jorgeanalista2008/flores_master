@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import FallingPetals from '@/components/FallingPetals';
@@ -10,7 +10,6 @@ import PetalGame from '@/components/PetalGame';
 import MusicPlayer from '@/components/MusicPlayer';
 import HeaderNav from '@/components/HeaderNav';
 import {
-  DedicationData,
   decodeDedication,
   PRESET_MESSAGES,
   BouquetType,
@@ -23,28 +22,13 @@ import {
   Mail,
   Gift,
   PlusCircle,
-  Share2,
-  HelpCircle,
-  Music,
-  Smile,
 } from 'lucide-react';
 
 function HomeContent() {
   const searchParams = useSearchParams();
 
-  // Estados de datos
-  const [dedication, setDedication] = useState<DedicationData>({
-    recipient: 'Mi Persona Favorita',
-    sender: 'Alguien que te quiere mucho',
-    message: PRESET_MESSAGES[0].text,
-    bouquetType: 'girasoles',
-  });
-  const [isDedicatedView, setIsDedicatedView] = useState<boolean>(false);
-  const [isLetterOpen, setIsLetterOpen] = useState<boolean>(false);
-  const [hasRevealed, setHasRevealed] = useState<boolean>(false);
-
-  useEffect(() => {
-    // Verificar si viene una dedicatoria en la URL
+  // Derivar datos de dedicatoria directamente a partir de searchParams sin efectos secundarios
+  const { dedication, isDedicatedView } = useMemo(() => {
     const code = searchParams.get('d');
     const para = searchParams.get('para');
     const de = searchParams.get('de');
@@ -54,26 +38,37 @@ function HomeContent() {
     if (code) {
       const decoded = decodeDedication(code);
       if (decoded) {
-        setDedication(decoded);
-        setIsDedicatedView(true);
-        return;
+        return { dedication: decoded, isDedicatedView: true };
       }
     }
 
     if (para || de || msg) {
-      setDedication({
-        recipient: para || 'Ti',
-        sender: de || 'Alguien especial',
-        message: msg || PRESET_MESSAGES[0].text,
-        bouquetType: (ramo as BouquetType) || 'girasoles',
-      });
-      setIsDedicatedView(true);
+      return {
+        dedication: {
+          recipient: para || 'Ti',
+          sender: de || 'Alguien especial',
+          message: msg || PRESET_MESSAGES[0].text,
+          bouquetType: (ramo as BouquetType) || 'girasoles',
+        },
+        isDedicatedView: true,
+      };
     }
+
+    return {
+      dedication: {
+        recipient: 'Mi Persona Favorita',
+        sender: 'Alguien que te quiere mucho',
+        message: PRESET_MESSAGES[0].text,
+        bouquetType: 'girasoles' as BouquetType,
+      },
+      isDedicatedView: false,
+    };
   }, [searchParams]);
+
+  const [isLetterOpen, setIsLetterOpen] = useState<boolean>(false);
 
   // Al abrir la sorpresa dedicada
   const handleRevealSurprise = () => {
-    setHasRevealed(true);
     setIsLetterOpen(true);
     musicBox?.play();
     musicBox?.playChime();

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { DedicationData, generateWhatsAppMessage, createShareableUrl } from '@/lib/dedicationUtils';
 import { musicBox } from '@/lib/audioSynthesis';
 import confetti from 'canvas-confetti';
-import { Heart, Sparkles, X, Share2, Copy, Check, MessageCircle, ExternalLink } from 'lucide-react';
+import { Heart, Sparkles, X, Copy, Check, MessageCircle, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 interface LoveLetterModalProps {

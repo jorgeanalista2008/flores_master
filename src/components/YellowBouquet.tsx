@@ -252,7 +252,7 @@ export default function YellowBouquet({
 
       {/* Indicador sutil de interacción */}
       <span className="mt-3 text-xs tracking-widest text-amber-700/80 font-medium uppercase bg-amber-500/10 px-3 py-1 rounded-full border border-amber-400/20 backdrop-blur-sm">
-        🌻 Toca el ramo para florecer magia 🌻
+        🌻 {type === 'rosas' ? 'Rosas Amarillas' : type === 'tulipanes' ? 'Tulipanes del Sol' : type === 'jardin' ? 'Jardín Silvestre Dorado' : 'Girasoles Radiantes'} &bull; Toca para florecer magia 🌻
       </span>
     </div>
   );
