@@ -53,7 +53,7 @@ export default function SignificadoPage() {
       <HeaderNav />
       <StructuredData faqItems={FAQ_DATA} />
 
-      <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-10 z-10">
+      <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 pt-6 pb-24 sm:py-10 z-10">
         {/* Cabecera del Artículo */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full text-xs font-semibold bg-amber-200/80 text-amber-900 border border-amber-300 mb-3">

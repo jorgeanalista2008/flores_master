@@ -106,28 +106,28 @@ function HomeContent() {
       <StructuredData />
 
       {/* ================= CONTENIDO PRINCIPAL ================= */}
-      <main className="flex-1 flex flex-col items-center justify-center max-w-5xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-10 z-10">
+      <main className="flex-1 flex flex-col items-center justify-center max-w-5xl w-full mx-auto px-4 sm:px-6 pt-3 pb-20 sm:py-10 z-10">
         <AdBannerPlaceholder slot="home-top" />
 
         {/* CASO A: VISTA DE DEDICATORIA PERSONALIZADA RECIBIDA */}
         {isDedicatedView ? (
           <div className="w-full flex flex-col items-center text-center animate-fadeIn">
             {/* Badge de sorpresa */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-amber-200/90 text-amber-950 border border-amber-300 shadow-sm mb-4">
-              <Gift className="w-4 h-4 text-amber-700 animate-bounce" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full text-xs font-semibold bg-amber-200/90 text-amber-950 border border-amber-300 shadow-sm mb-2 sm:mb-4">
+              <Gift className="w-3.5 h-3.5 text-amber-700 animate-bounce" />
               <span>¡Tienes una sorpresa especial esperándote!</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold text-amber-950 tracking-tight mb-2">
+            <h1 className="text-2xl sm:text-4xl md:text-6xl font-serif font-bold text-amber-950 tracking-tight mb-1 sm:mb-2">
               Flores Amarillas para {dedication.recipient} 🌻
             </h1>
 
-            <p className="text-base sm:text-xl text-amber-800/80 max-w-xl mx-auto mb-6">
+            <p className="text-sm sm:text-xl text-amber-800/80 max-w-xl mx-auto mb-3 sm:mb-6">
               De parte de <span className="font-semibold text-amber-950">{dedication.sender}</span> con todo su amor y cariño.
             </p>
 
             {/* Ramo interactivo */}
-            <div className="my-2">
+            <div className="my-1 sm:my-2">
               <YellowBouquet
                 type={dedication.bouquetType}
                 onFlowerClick={handleBouquetClick}
@@ -135,10 +135,10 @@ function HomeContent() {
             </div>
 
             {/* Botones de acción para quien recibe */}
-            <div className="flex flex-col sm:flex-row items-center gap-3.5 mt-6">
+            <div className="flex flex-col sm:flex-row items-center gap-2.5 sm:gap-3.5 mt-4 sm:mt-6 w-full max-w-sm sm:max-w-none">
               <button
                 onClick={handleRevealSurprise}
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-gradient-to-r from-amber-500 via-amber-600 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white font-bold text-base shadow-[0_10px_30px_rgba(217,119,6,0.35)] hover:shadow-[0_15px_35px_rgba(217,119,6,0.45)] transform hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:px-8 sm:py-4 rounded-full bg-gradient-to-r from-amber-500 via-amber-600 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white font-bold text-sm sm:text-base shadow-[0_10px_30px_rgba(217,119,6,0.35)] hover:shadow-[0_15px_35px_rgba(217,119,6,0.45)] transform active:scale-95 transition-all cursor-pointer min-h-[48px]"
               >
                 <Mail className="w-5 h-5 text-amber-100" />
                 <span>Abrir mi Carta & Mensaje 💛</span>
@@ -146,7 +146,7 @@ function HomeContent() {
 
               <Link
                 href="/crear"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/90 hover:bg-white text-amber-900 border border-amber-300 font-semibold text-sm shadow-sm hover:scale-105 transition-all cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 rounded-full bg-white/90 hover:bg-white text-amber-900 border border-amber-300 font-semibold text-xs sm:text-sm shadow-sm active:scale-95 transition-all cursor-pointer min-h-[44px]"
               >
                 <PlusCircle className="w-4 h-4 text-amber-700" />
                 <span>Responder / Dedicar Flores</span>
@@ -157,21 +157,21 @@ function HomeContent() {
           /* CASO B: VISITANTE GENERAL / HOME EXPLORER */
           <div className="w-full flex flex-col items-center text-center animate-fadeIn">
             {/* Badge Floricienta & Primavera */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-amber-200/90 text-amber-950 border border-amber-300 shadow-sm mb-4">
-              <Sparkles className="w-4 h-4 text-amber-700 animate-spin" style={{ animationDuration: '8s' }} />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-amber-200/90 text-amber-950 border border-amber-300 shadow-sm mb-2 sm:mb-4">
+              <Sparkles className="w-3.5 h-3.5 text-amber-700 animate-spin" style={{ animationDuration: '8s' }} />
               <span>Primavera &bull; Tradición del 21 de Septiembre</span>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-bold text-amber-950 tracking-tight max-w-3xl leading-[1.1] mb-4">
+            <h1 className="text-2xl sm:text-5xl md:text-7xl font-serif font-bold text-amber-950 tracking-tight max-w-3xl leading-[1.15] mb-2 sm:mb-4">
               Para que nunca te falten tus flores amarillas 🌻
             </h1>
 
-            <p className="text-base sm:text-xl font-serif italic text-amber-800/80 max-w-2xl mx-auto mb-8">
+            <p className="text-sm sm:text-xl font-serif italic text-amber-800/80 max-w-2xl mx-auto mb-4 sm:mb-8 px-2">
               &ldquo;Ella sabía que él sabía, que algún día pasaría... que vendría a buscarla con sus flores amarillas.&rdquo;
             </p>
 
             {/* Ramo Central Interactivo */}
-            <div className="my-2">
+            <div className="my-1 sm:my-2">
               <YellowBouquet
                 type="girasoles"
                 onFlowerClick={handleBouquetClick}
@@ -179,10 +179,10 @@ function HomeContent() {
             </div>
 
             {/* Acciones Principales */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
+            <div className="flex flex-col sm:flex-row items-center gap-2.5 sm:gap-4 mt-4 sm:mt-6 w-full max-w-sm sm:max-w-none">
               <Link
                 href="/crear"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-gradient-to-r from-amber-500 via-amber-600 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white font-bold text-base shadow-[0_10px_30px_rgba(217,119,6,0.35)] hover:shadow-[0_15px_35px_rgba(217,119,6,0.45)] transform hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:px-8 sm:py-4 rounded-full bg-gradient-to-r from-amber-500 via-amber-600 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white font-bold text-sm sm:text-base shadow-[0_10px_30px_rgba(217,119,6,0.35)] hover:shadow-[0_15px_35px_rgba(217,119,6,0.45)] transform active:scale-95 transition-all cursor-pointer min-h-[48px]"
               >
                 <Gift className="w-5 h-5 text-amber-100" />
                 <span>Dedicar a alguien especial 💛</span>
@@ -193,7 +193,7 @@ function HomeContent() {
                   setIsLetterOpen(true);
                   musicBox?.playChime();
                 }}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/90 hover:bg-white text-amber-950 border border-amber-300 font-semibold text-sm shadow-sm hover:scale-105 transition-all cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 rounded-full bg-white/90 hover:bg-white text-amber-950 border border-amber-300 font-semibold text-xs sm:text-sm shadow-sm active:scale-95 transition-all cursor-pointer min-h-[44px]"
               >
                 <Mail className="w-4 h-4 text-amber-700" />
                 <span>Ver Carta de Muestra</span>

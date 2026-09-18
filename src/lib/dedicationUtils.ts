@@ -55,6 +55,34 @@ export const PRESET_MESSAGES = [
   {
     title: 'Amistad que ilumina 🌼',
     text: 'Las mejores personas llegan para quedarse y llenar el mundo de color. Gracias por tu amistad incondicional, tus risas y tu calidez. ¡Feliz día de las flores amarillas!'
+  },
+  {
+    title: 'Mi sol en días nublados ☀️',
+    text: 'Como un girasol que siempre busca la luz del sol, mi corazón siempre encuentra calma y felicidad cuando está a tu lado. Gracias por iluminar mi mundo.'
+  },
+  {
+    title: 'Un amor inmarcesible 🌹',
+    text: 'Las flores frescas duran días, pero este ramo digital y lo que siento por ti jamás se marchitarán. Te elijo hoy, mañana y en cada primavera de mi vida.'
+  },
+  {
+    title: 'Para mi mejor amiga 💫',
+    text: 'Para la persona que conoce todos mis secretos, calma mis tristezas y celebra cada una de mis alegrías: ¡te mereces el campo de girasoles más grande del mundo!'
+  },
+  {
+    title: 'Sincero agradecimiento 🌷',
+    text: 'Te entrego estas flores amarillas como símbolo de gratitud por tu bondad, tu paciencia y por hacer de este mundo un lugar infinitamente más dulce y humano.'
+  },
+  {
+    title: 'Cómplice de mis sueños 💖',
+    text: 'Que este día de las flores amarillas te recuerde que tus sueños valen oro y que siempre estaré a tu lado para aplaudirte, cuidarte y verte florecer.'
+  },
+  {
+    title: 'Detalle sorpresa 🎁',
+    text: 'Una pequeña sorpresa amarilla para sacarte una sonrisa enorme hoy. No hay mayor alegría que verte feliz.'
+  },
+  {
+    title: 'Promesa eterna 🌈',
+    text: 'Ni la distancia ni el tiempo apagan lo que se cuida con el alma. Estas flores amarillas son mi promesa de lealtad, ternura y cariño eterno hacia ti.'
   }
 ];
 

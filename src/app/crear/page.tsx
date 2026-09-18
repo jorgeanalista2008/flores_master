@@ -92,7 +92,7 @@ export default function CrearDedicatoriaPage() {
       <FallingPetals />
       <HeaderNav />
 
-      <main className="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 sm:py-12 z-10">
+      <main className="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 pt-6 pb-24 sm:py-12 z-10">
         {/* Título de la página */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full text-xs font-semibold bg-amber-200/80 text-amber-900 border border-amber-300 mb-3">
@@ -123,7 +123,7 @@ export default function CrearDedicatoriaPage() {
                   value={recipient}
                   onChange={(e) => setRecipient(e.target.value)}
                   placeholder="Ej. Sofía, Mi amor, Mi mejor amiga..."
-                  className="w-full px-4 py-3 rounded-2xl bg-amber-50/60 border border-amber-300/80 text-amber-950 placeholder-amber-700/40 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm transition-all"
+                  className="w-full px-4 py-3 rounded-2xl bg-amber-50/60 border border-amber-300/80 text-amber-950 placeholder-amber-700/40 focus:outline-none focus:ring-2 focus:ring-amber-400 text-base sm:text-sm transition-all"
                 />
               </div>
 
@@ -138,7 +138,7 @@ export default function CrearDedicatoriaPage() {
                   value={sender}
                   onChange={(e) => setSender(e.target.value)}
                   placeholder="Ej. Lucas, Tu persona favorita..."
-                  className="w-full px-4 py-3 rounded-2xl bg-amber-50/60 border border-amber-300/80 text-amber-950 placeholder-amber-700/40 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm transition-all"
+                  className="w-full px-4 py-3 rounded-2xl bg-amber-50/60 border border-amber-300/80 text-amber-950 placeholder-amber-700/40 focus:outline-none focus:ring-2 focus:ring-amber-400 text-base sm:text-sm transition-all"
                 />
               </div>
 
@@ -156,7 +156,7 @@ export default function CrearDedicatoriaPage() {
                         setBouquetType(opt.id);
                         musicBox?.playChime();
                       }}
-                      className={`p-3 rounded-2xl text-left border text-xs transition-all flex flex-col gap-1 cursor-pointer ${
+                      className={`p-3 rounded-2xl text-left border text-xs transition-all flex flex-col gap-1 cursor-pointer active:scale-95 min-h-[58px] ${
                         bouquetType === opt.id
                           ? 'bg-amber-100 border-amber-500 shadow-sm font-semibold text-amber-950'
                           : 'bg-white hover:bg-amber-50/50 border-amber-200 text-amber-800'
@@ -185,14 +185,14 @@ export default function CrearDedicatoriaPage() {
                   </span>
                 </div>
 
-                {/* Botones de Frases Predefinidas */}
-                <div className="flex flex-wrap gap-1.5 mb-2.5">
+                {/* Botones de Frases Predefinidas con Desplazamiento Horizontal Suave */}
+                <div className="overflow-x-auto no-scrollbar flex items-center gap-1.5 py-1 mb-2.5 -mx-1 px-1">
                   {PRESET_MESSAGES.map((preset, idx) => (
                     <button
                       key={idx}
                       type="button"
                       onClick={() => handleSelectPreset(preset.text)}
-                      className="px-2.5 py-1 rounded-full text-[11px] font-medium bg-amber-100/90 hover:bg-amber-200 text-amber-900 border border-amber-300/70 transition-colors cursor-pointer"
+                      className="whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium bg-amber-100/90 hover:bg-amber-200 active:scale-95 text-amber-900 border border-amber-300/70 transition-all shrink-0 cursor-pointer"
                     >
                       {preset.title}
                     </button>
@@ -205,14 +205,14 @@ export default function CrearDedicatoriaPage() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Escribe aquí tu dedicatoria especial..."
-                  className="w-full px-4 py-3 rounded-2xl bg-amber-50/60 border border-amber-300/80 text-amber-950 placeholder-amber-700/40 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm transition-all resize-none font-serif leading-relaxed"
+                  className="w-full px-4 py-3 rounded-2xl bg-amber-50/60 border border-amber-300/80 text-amber-950 placeholder-amber-700/40 focus:outline-none focus:ring-2 focus:ring-amber-400 text-base sm:text-sm transition-all resize-none font-serif leading-relaxed"
                 />
               </div>
 
               {/* Botón generar enlace */}
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-gradient-to-r from-amber-500 via-amber-600 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white font-bold text-base shadow-[0_10px_25px_rgba(217,119,6,0.3)] hover:shadow-[0_15px_30px_rgba(217,119,6,0.4)] transform active:scale-98 transition-all cursor-pointer"
+                className="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-2xl bg-gradient-to-r from-amber-500 via-amber-600 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white font-bold text-base shadow-[0_10px_25px_rgba(217,119,6,0.3)] hover:shadow-[0_15px_30px_rgba(217,119,6,0.4)] transform active:scale-95 transition-all cursor-pointer min-h-[50px]"
               >
                 <Sparkles className="w-5 h-5" />
                 <span>Generar Sorpresa & Enlace</span>

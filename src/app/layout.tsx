@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Playfair_Display, Caveat, Inter } from 'next/font/google';
+import MobileBottomNav from '@/components/MobileBottomNav';
 import './globals.css';
 
 const playfair = Playfair_Display({
@@ -53,8 +54,9 @@ export default function RootLayout({
       lang="es"
       className={`${playfair.variable} ${caveat.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col selection:bg-amber-200 selection:text-amber-900">
+      <body className="min-h-full flex flex-col selection:bg-amber-200 selection:text-amber-900 pb-16 md:pb-0">
         {children}
+        <MobileBottomNav />
       </body>
     </html>
   );

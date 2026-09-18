@@ -55,7 +55,7 @@ export default function YellowBouquet({
     >
       {/* Halo de luz cálida detrás del ramo */}
       <div
-        className={`absolute w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-amber-400/25 via-yellow-300/30 to-amber-200/10 blur-3xl transition-opacity duration-1000 pointer-events-none ${
+        className={`absolute w-52 h-52 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-amber-400/25 via-yellow-300/30 to-amber-200/10 blur-3xl transition-opacity duration-1000 pointer-events-none ${
           bloomed ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
         }`}
       />
@@ -63,18 +63,18 @@ export default function YellowBouquet({
       {/* Partículas flotantes alrededor del ramo */}
       <div className="absolute inset-0 pointer-events-none">
         <Sparkles
-          className={`absolute top-6 left-8 text-amber-300 w-5 h-5 animate-pulse transition-opacity duration-700 ${
+          className={`absolute top-4 left-6 text-amber-300 w-4 h-4 sm:w-5 sm:h-5 animate-pulse transition-opacity duration-700 ${
             bloomed ? 'opacity-80' : 'opacity-0'
           }`}
         />
         <Sparkles
-          className={`absolute top-12 right-6 text-yellow-400 w-6 h-6 animate-bounce transition-opacity duration-700 ${
+          className={`absolute top-8 right-6 text-yellow-400 w-5 h-5 sm:w-6 sm:h-6 animate-bounce transition-opacity duration-700 ${
             bloomed ? 'opacity-90' : 'opacity-0'
           }`}
           style={{ animationDuration: '3s' }}
         />
         <Heart
-          className={`absolute -top-2 right-1/4 text-amber-400/60 w-4 h-4 animate-pulse transition-opacity duration-700 ${
+          className={`absolute -top-1 right-1/4 text-amber-400/60 w-3.5 h-3.5 sm:w-4 sm:h-4 animate-pulse transition-opacity duration-700 ${
             bloomed ? 'opacity-70' : 'opacity-0'
           }`}
         />
@@ -83,9 +83,9 @@ export default function YellowBouquet({
       {/* Ilustración SVG del Ramo */}
       <svg
         viewBox="0 0 500 560"
-        className="w-full max-w-[340px] sm:max-w-[420px] md:max-w-[460px] h-auto drop-shadow-[0_15px_30px_rgba(234,179,8,0.35)] transition-all duration-1000 ease-out"
+        className="w-full max-w-[240px] xs:max-w-[270px] sm:max-w-[350px] md:max-w-[420px] max-h-[32vh] sm:max-h-[42vh] h-auto drop-shadow-[0_10px_25px_rgba(234,179,8,0.3)] transition-all duration-1000 ease-out object-contain"
         style={{
-          transform: bloomed ? 'scale(1)' : 'scale(0.85) translateY(20px)',
+          transform: bloomed ? 'scale(1)' : 'scale(0.85) translateY(15px)',
           opacity: bloomed ? 1 : 0.6,
         }}
       >
@@ -251,7 +251,7 @@ export default function YellowBouquet({
       </svg>
 
       {/* Indicador sutil de interacción */}
-      <span className="mt-3 text-xs tracking-widest text-amber-700/80 font-medium uppercase bg-amber-500/10 px-3 py-1 rounded-full border border-amber-400/20 backdrop-blur-sm">
+      <span className="mt-2 sm:mt-3 text-[10px] sm:text-xs tracking-wider text-amber-800 font-semibold uppercase bg-amber-500/10 px-3 py-1 rounded-full border border-amber-400/30 backdrop-blur-sm">
         🌻 {type === 'rosas' ? 'Rosas Amarillas' : type === 'tulipanes' ? 'Tulipanes del Sol' : type === 'jardin' ? 'Jardín Silvestre Dorado' : 'Girasoles Radiantes'} &bull; Toca para florecer magia 🌻
       </span>
     </div>

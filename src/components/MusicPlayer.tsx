@@ -26,7 +26,7 @@ export default function MusicPlayer() {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-40 flex items-center gap-2">
+    <div className="fixed bottom-20 sm:bottom-5 right-4 sm:right-5 z-30 flex items-center gap-2">
       <button
         onClick={toggleMusic}
         className={`group relative flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-md shadow-lg border transition-all duration-300 cursor-pointer ${
